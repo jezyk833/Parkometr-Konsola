@@ -72,7 +72,8 @@ public class ParkometrTest {
 	
 	System.out.println("Dziękujemy, miłego dnia");
 	try {
-	    fileWriter = new FileWriter(filePath);
+	    fileWriter = new FileWriter(filePath, true);
+	    fileWriter.write('\n');
 	    fileWriter.write(czasaktualny);
 	    fileWriter.write(" ");
 	    if (czasparkowania == 15 ) {
