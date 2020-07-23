@@ -74,8 +74,9 @@ public class ParkometrTest {
 	try {
 	    fileWriter = new FileWriter(filePath, true);
 	    fileWriter.write('\n');
-	    fileWriter.write(czasaktualny);
+	    fileWriter.write(data);
 	    fileWriter.write(" ");
+	    fileWriter.write("Czas Parkowania: ");
 	    if (czasparkowania == 15 ) {
 	    	fileWriter.write("bezpłatnie");
 		}else if(czasparkowania ==30) {
@@ -84,8 +85,10 @@ public class ParkometrTest {
 			fileWriter.write(String.valueOf(czasparkowania)+ "godziny");
 		}	   
 	    fileWriter.write(" ");
+	    fileWriter.write("Numer Rejestracyjny: ");
 	    fileWriter.write(numer);
 	    fileWriter.write(" ");
+	    fileWriter.write("Kwota do zapłaty: ");
 	    fileWriter.write(String.valueOf(parkometr.getSaldo())+ "zł");
 	} finally {
 	    if (fileWriter != null) {
